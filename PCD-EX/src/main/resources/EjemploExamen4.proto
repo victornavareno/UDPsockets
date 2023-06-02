@@ -1,0 +1,16 @@
+
+syntax = "proto3";
+
+option java_package = "main";
+
+service Descuento {
+  rpc aplicarDescuento (ExamenRequest) returns (ExamenReply) {}
+}
+
+message ExamenRequest {
+  string id = 1;
+}
+
+message ExamenReply {
+  int32 descuento = 1;
+}
